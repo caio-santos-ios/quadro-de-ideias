@@ -1,0 +1,24 @@
+section{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: row wrap;
+    gap: 1rem;
+}
+
+button{
+    height: 15rem;
+    width: 25rem;
+    font-size: 2rem;
+}
+
+button:hover{
+    transition: 1s;
+    background-color: blue;
+}
+
+.botao__login{
+
+}
