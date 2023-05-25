@@ -1,0 +1,16 @@
+*{
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    color: white;
+    outline: none;
+}
+
+button{
+    background-color: rgb(84, 84, 181);
+    border-radius: 1rem;
+    border: none;
+    outline: none;
+    width: 6rem;
+    height: 3rem;
+}

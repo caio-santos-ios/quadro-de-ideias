@@ -1,0 +1,74 @@
+header {
+    background-color: red;
+    height: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.material-symbols-outlined {
+    font-variation-settings:
+        'FILL' 0,
+        'wght' 400,
+        'GRAD' 0,
+        'opsz' 48
+}
+
+main {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+}
+
+section {
+    width: 80vw;
+}
+
+ul {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    gap: 1rem;
+}
+
+li{
+    height: 5rem;
+    width: 20rem;
+    list-style: none;
+    background-color: #281696;
+    border-radius: 0.9rem;
+    margin: 2rem 0;
+    padding: 2rem;
+}
+
+.container {
+    background-color: #281696;
+    display: flex;
+    padding: 1rem;
+    border-radius: 0.9rem;
+    align-items: center;
+    gap: 1rem;
+}
+
+.descricao__ideia {
+    padding: 1rem;
+    color: black;
+    font-size: 1rem;
+}
+
+p {
+    background-color: transparent;
+}
+
+span {
+    background-color: transparent;
+}
+
+.botao__ver__melhoria {
+    cursor: pointer;
+    padding: 1.5rem;
+    background-color: rgb(84, 84, 181);
+    border-radius: 1rem;
+    border: none;
+    outline: none;
+}
