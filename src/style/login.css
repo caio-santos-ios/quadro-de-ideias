@@ -59,3 +59,13 @@ form>button:hover {
     transition: 1s;
     background-color: blue;
 }
+
+.usuario__incorreto{
+    border: rgb(255, 0, 0) solid 0.09rem;
+    color: red;
+    background-color: transparent;
+}
+.msg__usuario__incorreto{
+    color: red;
+    background-color: transparent;
+}
