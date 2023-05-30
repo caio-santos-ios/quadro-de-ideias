@@ -20,9 +20,9 @@
         <section>
             <form>
                 <label for="titulo">Titulo</label>
-                <input class="titulo" type="text">
+                <input required class="titulo" type="text">
                 <label for="descricao">Descrição</label>
-                <input class="descricao" type="text">
+                <input required class="descricao" type="text">
                 <div class="container__grupo__botoes">
                     <button class="bota__cancelar">Cancelar</button>
                     <button class="botao__salvar">Salvar</button>
@@ -30,6 +30,15 @@
             </form>
         </section>
     </main>
+    <dialog>
+        <div>
+            <h3>Ideia criada</h3>
+            <button class="botao__ir__historico">Historico</button>
+        </div>
+    </dialog>
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-auth-compat.js"></script>
     <script type="module" src="../scripts/criar.js"></script>
 </body>
 

@@ -4,6 +4,7 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
+    gap: 2rem;
 }
 
 .material-symbols-outlined {
@@ -31,18 +32,23 @@ ul {
     gap: 1rem;
 }
 
-li{
-    height: 5rem;
-    width: 20rem;
+li {
+    height: 8rem;
+    width: 25rem;
+    max-width: 25rem;
     list-style: none;
     background-color: #281696;
     border-radius: 0.9rem;
     margin: 2rem 0;
     padding: 2rem;
+    transition: 1s;
+    position: relative;
+    display: flex;
+    flex-flow: column;
 }
 
 .container {
-    background-color: #281696;
+    background-color: #969016;
     display: flex;
     padding: 1rem;
     border-radius: 0.9rem;
@@ -51,6 +57,10 @@ li{
 }
 
 .descricao__ideia {
+    transition: 1s;
+    height: 12rem;
+    width: 23rem;
+    display: flex;
     padding: 1rem;
     color: black;
     font-size: 1rem;
@@ -62,6 +72,7 @@ p {
 
 span {
     background-color: transparent;
+    cursor: pointer;
 }
 
 .botao__ver__melhoria {
@@ -72,3 +83,131 @@ span {
     border: none;
     outline: none;
 }
+
+.nome__criador__ideia {
+    background-color: rgb(84, 84, 181);
+    width: 6.5rem;
+    height: 4.5rem;
+    padding: 2.5rem 0 0 0;
+    border-radius: 50%;
+    text-align: center;
+    position: absolute;
+    right: 0.9rem;
+    top: 0.9rem;
+}
+
+.container__status {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    gap: 1rem;
+    background-color: transparent;
+}
+
+.container__status>button {
+    height: 2.5rem;
+}
+
+
+
+.status__ideia {
+    width: 3rem;
+    height: 3rem;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    border-radius: 50%;
+}
+
+.status__ideia__aprovado {
+    background-color: rgb(30, 213, 30);
+}
+
+.status__ideia__reprovado {
+    background-color: rgb(213, 30, 30);
+
+}
+
+.status__ideia__analise {
+
+    background-color: rgb(213, 176, 30);
+}
+
+/* modal deletar */
+.modal__deletar {
+    width: 100vw;
+    height: 100vh;
+    background-color: transparent;
+    border: 0;
+    position: relative;
+}
+
+.container__modal__deletar {
+    background-color: white;
+    width: 25rem;
+    height: 10rem;
+    border-radius: 0.5rem;
+    position: absolute;
+    left: 40%;
+    top: 30%;
+    display: flex;
+    flex-flow: wrap;
+    align-items: center;
+    justify-content: space-around;
+
+}
+
+.container__modal__deletar>button {
+    width: 10rem;
+}
+
+.botao__cancelar {
+    background-color: rgb(247, 205, 205);
+}
+
+.botao__deletar {
+    background-color: red;
+
+}
+
+/* modal editar */
+.modal__editar {
+    background-color: red;
+    width: 100vw;
+    height: 100vh;
+    background-color: transparent;
+    border: 0;
+}
+
+.container__modal__editar {
+    background-color: transparent;
+}
+
+.container__modal__editar>form {
+    background-color: white;
+    width: 25rem;
+    height: 10rem;
+    border-radius: 0.5rem;
+    position: absolute;
+    display: flex;
+    flex-flow: wrap;
+    align-items: center;
+    justify-content: space-around;
+    padding: 2rem;
+}
+
+form>input {
+    width: 100%;
+    height: 1rem;
+    border: 0.03rem solid blue;
+    background-color: transparent;
+    border-radius: 0.5rem;
+    color: black;
+    padding: 1rem;
+}
+
+
+form>.titulo {}
+
+form>.descricao {}

@@ -19,14 +19,17 @@
     <main>
         <section>
             <form>
-                <label for="email">E-mail</label>
-                <input type="email" placeholder="Digite seu e-mail">
+                <label for="email">Usuário</label>
+                <input class="usuario" type="text" placeholder="Digite seu usuario">
                 <label for="senha">Senha</label>
-                <input type="password" placeholder="Digite sua senha">
+                <input class="senha" type="password" placeholder="Digite sua senha">
                 <button class="botao__entar__conta">Entrar</button>
             </form>
         </section>
     </main>
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-auth-compat.js"></script>
     <script type="module" src="../scripts/login.js"></script>
 </body>
 
