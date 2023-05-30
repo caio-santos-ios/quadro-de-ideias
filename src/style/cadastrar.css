@@ -2,7 +2,6 @@ section{
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 1rem;
 }
 
 form {
@@ -25,7 +24,6 @@ label {
 
 input {
     width: 90%;
-    border: 0;
     outline: none;
     border: none;
     padding: 1rem;
@@ -35,21 +33,7 @@ input {
     font-size: 1rem;
 }
 
-input::placeholder{
-    color: #ffffff;
-}
-
-form>button:hover {
-    transition: 1s;
-    background-color: blue;
-}
-
-.usuario__incorreto{
-    border: rgb(255, 0, 0) solid 0.09rem;
-    color: red;
-    background-color: transparent;
-}
-.msg__usuario__incorreto{
-    color: red;
-    background-color: transparent;
+.botao__fazer__login{
+    color: rgb(216, 190, 190);
+    background-color: green;
 }

@@ -1,16 +1,15 @@
 section{
-    height: 100vh;
-    width: 100vw;
+    background-color: aquamarine;
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-flow: row wrap;
+    flex-flow: wrap;
     gap: 1rem;
 }
 
 button{
     height: 15rem;
-    width: 25rem;
+    width: 20rem;
     font-size: 2rem;
 }
 
