@@ -25,11 +25,33 @@
         <section>
             <h1>Lista de ideias da equipe</h1>
             <ul>
-               
+
             </ul>
         </section>
     </main>
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-auth-compat.js"></script>
     <script type="module" src="../scripts/historico.js"></script>
 </body>
+<!-- modal deletar -->
+<dialog class="modal__deletar">
+    <div class="container__modal__deletar">
+        <button class="botao__cancelar">Cancelar</button>
+        <button class="botao__deletar">Deletar</button>
+    </div>
+</dialog>
+
+<!-- modal editado -->
+<dialog class="modal__editar">
+    <div class="container__modal__editar">
+        <form>
+            <input class="titulo" type="text">
+            <input class="descricao" type="text">
+            <button class="botao__cancelar__edicao">Cancelar</button>
+            <button class="botao__salvar__edicao">Salvar</button>
+        </form>
+    </div>
+</dialog>
 
 </html>

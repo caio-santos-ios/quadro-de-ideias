@@ -1,40 +1,34 @@
-import { listaUsuarios } from "../db/usuario.js"
-
-
-
-export function autenticacao(arr) {
-    const usuario = document.querySelector('.usuario')
-    const senha = document.querySelector('.senha')
-
-    listaUsuarios.forEach(usuarioAutenticado => {
-        //console.log(usuario.value)
-        //console.log(senha.value)
-        //console.log(usuarioAutenticado.nome)
-
-        if (usuarioAutenticado.nome == usuario.value && usuarioAutenticado.senha == senha.value) {
-
-            document.location.replace('./home.html')
-            localStorage.setItem('@QI:tokenUsuario', JSON.stringify(usuarioAutenticado))
-        } else {
-
-            senha.classList.add('usuario__incorreto')
-            senha.insertAdjacentHTML('afterend', `<p class="msg__usuario__incorreto">Usuario incorreto</p>`)
-        }
-    })
-
-}
-//autenticacao(listaUsuarios)
+import db from "../db/conexão.js"
 
 
 export const botaoEntrarConta = document.querySelector('.botao__entar__conta')
 botaoEntrarConta.addEventListener('click', (evento) => {
     evento.preventDefault()
 
+    const usuario = document.querySelector('.usuario').value
+    const senha = document.querySelector('.senha').value
+
+    
     const msgErro = document.querySelector('.msg__usuario__incorreto')
     if (msgErro != null) {
         msgErro.remove()
     }
-    autenticacao(listaUsuarios)
+
+    db.collection("usuarios").get()
+        .then((resposta) => {
+
+            resposta.forEach((user) => {
+                console.log(user.data())
+                if (user.data().nome == usuario && user.data().password == senha) {
+
+                    localStorage.setItem("@QI:token", user.id)
+                    document.location.replace('./home.html')
+                } else {
+
+                    //console.log('usuario não conectado')
+                }
+            })
+        })
 })
 
 

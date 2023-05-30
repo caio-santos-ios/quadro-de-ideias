@@ -4,6 +4,7 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
+    gap: 2rem;
 }
 
 .material-symbols-outlined {
@@ -32,8 +33,9 @@ ul {
 }
 
 li {
-    height: 5rem;
+    height: 8rem;
     width: 25rem;
+    max-width: 25rem;
     list-style: none;
     background-color: #281696;
     border-radius: 0.9rem;
@@ -41,10 +43,12 @@ li {
     padding: 2rem;
     transition: 1s;
     position: relative;
+    display: flex;
+    flex-flow: column;
 }
 
 .container {
-    background-color: #281696;
+    background-color: #969016;
     display: flex;
     padding: 1rem;
     border-radius: 0.9rem;
@@ -53,6 +57,10 @@ li {
 }
 
 .descricao__ideia {
+    transition: 1s;
+    height: 12rem;
+    width: 23rem;
+    display: flex;
     padding: 1rem;
     color: black;
     font-size: 1rem;
@@ -125,3 +133,81 @@ span {
 
     background-color: rgb(213, 176, 30);
 }
+
+/* modal deletar */
+.modal__deletar {
+    width: 100vw;
+    height: 100vh;
+    background-color: transparent;
+    border: 0;
+    position: relative;
+}
+
+.container__modal__deletar {
+    background-color: white;
+    width: 25rem;
+    height: 10rem;
+    border-radius: 0.5rem;
+    position: absolute;
+    left: 40%;
+    top: 30%;
+    display: flex;
+    flex-flow: wrap;
+    align-items: center;
+    justify-content: space-around;
+
+}
+
+.container__modal__deletar>button {
+    width: 10rem;
+}
+
+.botao__cancelar {
+    background-color: rgb(247, 205, 205);
+}
+
+.botao__deletar {
+    background-color: red;
+
+}
+
+/* modal editar */
+.modal__editar {
+    background-color: red;
+    width: 100vw;
+    height: 100vh;
+    background-color: transparent;
+    border: 0;
+}
+
+.container__modal__editar {
+    background-color: transparent;
+}
+
+.container__modal__editar>form {
+    background-color: white;
+    width: 25rem;
+    height: 10rem;
+    border-radius: 0.5rem;
+    position: absolute;
+    display: flex;
+    flex-flow: wrap;
+    align-items: center;
+    justify-content: space-around;
+    padding: 2rem;
+}
+
+form>input {
+    width: 100%;
+    height: 1rem;
+    border: 0.03rem solid blue;
+    background-color: transparent;
+    border-radius: 0.5rem;
+    color: black;
+    padding: 1rem;
+}
+
+
+form>.titulo {}
+
+form>.descricao {}

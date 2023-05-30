@@ -1,3 +1,6 @@
+import db from "../db/conexão.js"
+
+
 const botaoVoltar = document.querySelector('.botao__voltar')
 botaoVoltar.addEventListener('click', (evento) => {
     evento.preventDefault()
@@ -15,30 +18,34 @@ botaIrHistorico.addEventListener('click', (evento) => {
 
 /* função para criar nova ideia */
 export function criarIdeia() {
-    const tokeUsuario = JSON.parse(localStorage.getItem('@QI:tokenUsuario'))
+    const tokeUsuario = localStorage.getItem('@QI:token')
+    const geradorId = Math.floor(Math.random() * (0, 999999999999) + 1)
 
     const titulo = document.querySelector('.titulo')
     const descricao = document.querySelector('.descricao')
 
     const botaoSalvar = document.querySelector('.botao__salvar')
-
     botaoSalvar.addEventListener('click', (evento) => {
         evento.preventDefault()
-        let i = JSON.parse(localStorage.getItem('@QI:listaIdeias'))
 
+        if (titulo.value != '' && descricao.value != '') {
+            console.log(1)
+            const inf = db.collection("ideias");
 
-        const ideia = {
-            idUsuario: tokeUsuario.id,
-            nomeIdeia: titulo.value,
-            descricaoIdeia: descricao.value,
-            autor: false,
-            idIdeia: i.length + 1,
-            status: null
+            const ideia = {
+                idUsuario: tokeUsuario,
+                nomeIdeia: titulo.value,
+                descricaoIdeia: descricao.value,
+                autor: false,
+                idIdeia: geradorId,
+                status: "Analise"
+            }
+            
+            inf.doc(geradorId.toString()).set(ideia)
+            document.querySelector('dialog').showModal()
         }
-        i.push(ideia)
-        localStorage.setItem('@QI:listaIdeias', JSON.stringify(i))
 
-        document.querySelector('dialog').showModal()
+       
     })
 }
 criarIdeia()

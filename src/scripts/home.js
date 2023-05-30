@@ -17,6 +17,6 @@ const botaIrHome = document.querySelector('.botao__ir__home')
 botaIrHome.addEventListener('click', (evento) => {
     evento.preventDefault()
     
-    localStorage.removeItem('@QI:tokenUsuario')
+    localStorage.removeItem('@QI:token')
     document.location.replace('../.././index.html')
 })
