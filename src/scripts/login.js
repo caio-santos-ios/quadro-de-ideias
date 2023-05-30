@@ -5,6 +5,8 @@ export const botaoEntrarConta = document.querySelector('.botao__entar__conta')
 botaoEntrarConta.addEventListener('click', (evento) => {
     evento.preventDefault()
 
+    //const
+
     const usuario = document.querySelector('.usuario').value
     const senha = document.querySelector('.senha').value
 
